@@ -54,7 +54,7 @@ This vulnerability allows an authenticated administrative user to:
 
 ## Responsible Disclosure
 
-This vulnerability was reported to the Koha project maintainers on [DATE], and has been fixed in the following releases:
+This vulnerability was reported to the Koha project maintainers on the 19th of February 2025, and has been fixed in the following releases:
 - 24.05.07
 - 24.11.02
 - 23.11.12
