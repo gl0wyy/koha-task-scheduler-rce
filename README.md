@@ -28,7 +28,7 @@ my $command =
     . "$base/cronjobs/runreport.pl $report --format=$format --to='$email'";
 ```
 
-The `$report` variable comes from user input and undergoes insufficient validation. While the code checks that a report ID exists in the database, it doesn't sanitise the value against command injection attacks. An attacker can bypass this validation by providing a valid report ID followed by shell metacharacters.
+The `$report` variable comes from user input and undergoes flawed validation. The code converts the input to an integer to check if a report exists in the database, but then uses the original, unmodified string in the command. This allows an attacker to append shell metacharacters after a valid report ID to inject commands that will be executed on the server.
 
 ## Proof of Concept
 
@@ -80,16 +80,16 @@ This vulnerability was reported to the Koha project maintainers on [DATE], and h
 
 ## Timeline
 
-- **Discovery**: [Your discovery date]
-- **Reported**: [Your report date]
-- **Fixed**: [Fix date]
-- **Public disclosure**: [Disclosure date]
+- **Discovery**: 19/02/2025
+- **Reported**: 19/02/2025
+- **Fixed**: 27/02/2025
+- **Public disclosure**: 27/02/2025
 
 ## Credit
 
-Discovered by [Your Name/Organisation]
+Discovered by Craig Fairman
 
 ## References
 
-1. [Link to Koha security advisory when available]
-2. [Link to patch/commit when available]
+1. https://bugs.koha-community.org/bugzilla3/show_bug.cgi?id=39170)
+
