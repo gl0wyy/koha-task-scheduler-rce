@@ -52,24 +52,6 @@ This vulnerability allows an authenticated administrative user to:
 - Access, modify, or delete library data
 - Potentially gain further access to the host system
 
-## Recommended Fixes
-
-Implement proper input validation and command sanitisation:
-
-```perl
-# Validate that $report contains only digits
-if ($report && $report =~ /^\d+$/) {
-    my $command =
-          "export KOHA_CONF=\"$CONFIG_NAME\"; "
-        . "$base/cronjobs/runreport.pl $report --format=$format --to='$email'";
-    # Rest of code...
-}
-else {
-    # Handle invalid input
-    $template->param( job_add_failed => 1 );
-}
-```
-
 ## Responsible Disclosure
 
 This vulnerability was reported to the Koha project maintainers on [DATE], and has been fixed in the following releases:
