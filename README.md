@@ -1,4 +1,4 @@
-# Koha ILS Command Injection Vulnerability
+# Koha ILS Command Injection Vulnerability - CVE-2025-30076
 
 This repository documents a command injection vulnerability in Koha Integrated Library System affecting versions prior to 24.05.07, 24.11.02, 23.11.12, and 22.11.24.
 
