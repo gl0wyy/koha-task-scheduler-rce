@@ -4,7 +4,7 @@ This repository documents a command injection vulnerability in Koha Integrated L
 
 ## Vulnerability Details
 
-- **CVE ID**: CVE-YYYY-XXXXX (pending assignment)
+- **CVE ID**: CVE-2025-30076 (pending assignment)
 - **Vulnerability Type**: Command Injection
 - **CWE**: CWE-78 (Improper Neutralisation of Special Elements used in an OS Command)
 - **Affected Component**: tools/scheduler.pl
